@@ -1,34 +1,36 @@
 import React from "react";
-import img1 from '../../assets/image/img (5).jpeg'
-import img2 from '../../assets/image/img (6).jpeg'
-import img3 from '../../assets/image/img (7).jpeg'
-import img4 from '../../assets/image/img (10).jpeg'
+import { motion } from "framer-motion";
+import img1 from '../../assets/image/img (5).jpeg';
+import img2 from '../../assets/image/img (6).jpeg';
+import img3 from '../../assets/image/img (7).jpeg';
+import img4 from '../../assets/image/img (10).jpeg';
+
 // Array of product data
 const products = [
   {
     id: 1,
-    image:img1,
+    image: img1,
     name: "Army Green Active Short Sleeve",
     price: 14.95,
     originalPrice: 19.95,
   },
   {
     id: 2,
-    image:img2,
+    image: img2,
     name: "Army Green Active Short Sleeve",
     price: 14.95,
     originalPrice: 19.95,
   },
   {
     id: 3,
-    image:img3,
+    image: img3,
     name: "Army Green Active Short Sleeve",
     price: 14.95,
     originalPrice: 19.95,
   },
   {
     id: 4,
-    image:img4,
+    image: img4,
     name: "Army Green Active Short Sleeve",
     price: 14.95,
     originalPrice: 19.95,
@@ -36,10 +38,31 @@ const products = [
 ];
 
 const ProductSection = () => {
+  // Variants for stagger animation
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 },
+  };
+
   return (
-    <div className="section text-start py-10 px-10">
+    <motion.div
+      initial="hidden"
+      animate="show"
+      variants={container}
+      className="section text-start py-10 px-10"
+    >
       {/* Heading */}
-      <h1 className="text-3xl font-bold mb-6 ml-4">
+      <h1 className="text-4xl font-bold mb-6 ml-4">
         BUY 1 GET 1 FREE
         <br />
         ON{" "}
@@ -49,7 +72,12 @@ const ProductSection = () => {
       {/* Products Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 container mx-auto">
         {products.map((product) => (
-          <div key={product.id} className="product bg-white shadow-md rounded-lg p-4">
+          <motion.div
+            key={product.id}
+            variants={item}
+            className="product bg-white shadow-md rounded-lg p-4"
+            whileHover={{ scale: 1.05 }}
+          >
             <img
               src={product.image}
               alt={product.name}
@@ -62,10 +90,10 @@ const ProductSection = () => {
                 ${product.originalPrice.toFixed(2)}
               </span>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

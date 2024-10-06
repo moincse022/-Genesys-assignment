@@ -16,7 +16,7 @@ const Navbar = () => {
         </div>
         {/* Menu Icon */}
         <div className="block md:hidden">
-          <FaBars className="text-2xl"/>
+          <FaBars className="text-2xl text-white"/>
         </div>
       </div>
     </header>

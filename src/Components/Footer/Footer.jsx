@@ -30,21 +30,21 @@ const Footer = () => {
         {/* Subscription and Links Section */}
         <div className="footer-subscription flex flex-col lg:flex-row justify-between items-start  space-y-8 lg:space-y-0">
           {/* Subscription Section */}
-          <div className="footer-subscribe lg:w-1/2">
+          <div className="footer-subscribe  lg:w-1/2">
             <p className="mb-4 text-2xl">
               Subscribe and be the first to receive <br/> notifications about our
               upcoming releases <br/> and the latest news.
             </p>
-            <form className="subscribe-form ">
+            <form className="subscribe-form flex flex-col">
               <input
                 type="email"
                 placeholder="Enter your email"
                 required
-                className="p-3 flex-grow border border-gray-600 rounded-md text-gray-900"
+                className="p-3 w-96 border border-white-600 bg-black rounded-md text-gray-900"
               />
               <button
                 type="submit"
-                className="p-3 bg-red-600 text-white rounded-md ml-0 sm:ml-4"
+                className="p-3 w-96  bg-white text-gray-900 rounded-md mt-4 hover:bg-red-700"
               >
                 Subscribe
               </button>

@@ -3,7 +3,7 @@ import img1 from '../../assets/image/img (1).jpeg'
 import img2 from '../../assets/image/img (11).jpeg'
 import img3 from '../../assets/image/img (10).png'
 import img4 from '../../assets/image/img (9).png'
-import img5 from '../../assets/image/img (9).jpeg'
+import img5 from '../../assets/image/img (11).png'
 
 const products = [
   {
@@ -47,7 +47,7 @@ const Banner = () => {
   return (
     <>
       {/* Main Content */}
-      <main className="container mx-auto p-6 bg-[#EA2127] -mt-10">
+      <main className="container mx-auto p-6 bg-[#EA2127] -mt-12">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:-mr-40 gap-6">
           {/* Mapping over the products array */}
           {products.map((product) => (
@@ -62,9 +62,9 @@ const Banner = () => {
               />
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-white">{product.name}</h3>
-                <div className="main-price text-lg">
+                <div className="main-price text-lg text-white">
                   ${product.price.toFixed(2)}{" "}
-                  <span className="original-price text-gray-500 line-through ml-2">
+                  <span className="original-price text-white line-through ml-2">
                     ${product.originalPrice.toFixed(2)}
                   </span>
                 </div>
