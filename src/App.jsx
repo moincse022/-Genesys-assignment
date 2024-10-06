@@ -2,6 +2,7 @@
 import BackGround from './Components/BackGround/BackGround'
 import Banner from './Components/Banner/Banner'
 import BookSection from './Components/Book/BookSection'
+import Footer from './Components/Footer/Footer'
 import MissionSection from './Components/MissionSection/MissionSection'
 import Navbar from './Components/Navbar/Navbar'
 import ProductSection from './Components/Products/ProductSection'
@@ -22,6 +23,9 @@ function App() {
       </div>
       <div className="">
         <MissionSection/>
+      </div>
+      <div className="">
+        <Footer/>
       </div>
     </>
   )
