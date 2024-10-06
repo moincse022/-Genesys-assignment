@@ -40,11 +40,11 @@ const Footer = () => {
                 type="email"
                 placeholder="Enter your email"
                 required
-                className="p-3 w-96 border border-white-600 bg-black rounded-md text-gray-900"
+                className="p-3 w-80 lg:w-96 border border-white-600 bg-black rounded-md text-gray-900"
               />
               <button
                 type="submit"
-                className="p-3 w-96  bg-white text-gray-900 rounded-md mt-4 hover:bg-red-700"
+                className="p-3 w-80 lg:w-96 bg-white text-gray-900 rounded-md mt-4 hover:bg-red-700"
               >
                 Subscribe
               </button>
@@ -98,7 +98,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom Section */}
-      <div className="footer-bottom flex justify-around gap-48 lg:items-center  text-center py-4 mt-10">
+      <div className="footer-bottom lg:flex lg:justify-around gap-48 lg:items-center  text-center py-4 mt-10">
         <p>© 2024 VTMerch Store. All rights reserved.</p>
         <div className="payment-icons flex justify-center space-x-4 mt-4">
           <img src={icon1} alt="Visa" className="w-10 h-auto" />
